@@ -1,0 +1,45 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--dark);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: #fff;
+      font-weight: 500;
+      transition: $transition;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .nav-links {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  }
+}

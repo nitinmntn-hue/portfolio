@@ -1,0 +1,22 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  padding-top: 70px;   /* height of navbar */
+  padding-bottom: 60px; /* height of footer */
+}
+
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}

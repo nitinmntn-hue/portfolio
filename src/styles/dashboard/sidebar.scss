@@ -1,0 +1,39 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+
+.sidebar {
+  background-color: var(--dark);
+  width: 120px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  box-shadow: var(--dark);
+
+  .sidebar-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--accent);
+  }
+
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+
+    .menu-item {
+      margin-bottom: 15px;
+
+      a {
+        text-decoration: none;
+        color: var(--accent);
+        font-size: 1.1rem;
+
+        &:hover {
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+.about {
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+
+    li {
+      background: var(--dark);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 500;
+      transition: transform 0.3s, background 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        background: var(--primary);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills {
+      grid-template-columns: 1fr;
+    }
+  }
+}

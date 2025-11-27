@@ -1,0 +1,57 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+
+.shine-button {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+  overflow: hidden;
+  transition: $transition;
+  color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 250%;
+    width: 40px;
+    top: 0;
+    left: -60px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: rotate(45deg) translateY(-35%);
+    animation: shine 3s ease infinite;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes shine {
+  0% { left: -80px; }
+  40% { left: calc(100% + 20px); }
+  100% { left: calc(100% + 20px); }
+}
+
+/* Example color variants */
+.button-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+}
+
+.button-accent {
+  background: linear-gradient(135deg, var(--accent), #ffd200);
+  box-shadow: 0 10px 30px rgba(247,151,30,0.4);
+}
+.button-dark {
+  background: linear-gradient(135deg, #333, #555);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,137 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+.contact {
+  background: #000;
+  color: #fff;
+  padding: 3rem 1rem;
+
+  .section-header {
+    text-align: center;
+    font: 300 48px 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+
+    @media (max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* Form */
+  .form-horizontal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background: #111;
+      color: #fff;
+      font-size: 1rem;
+
+      &:focus {
+        border-color: var(--primary);
+        outline: none;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .send-button {
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #e68900;
+      }
+    }
+  }
+
+  /* Contact Info */
+  .direct-contact-container {
+    flex: 1;
+    max-width: 500px;
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+
+      li {
+        margin: 0.8rem 0;
+        font-size: 1rem;
+        color: #bbb;
+
+        i {
+          margin-right: 10px;
+          color: var(--primary);
+        }
+
+        a {
+          color: #bbb;
+          text-decoration: none;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .social-media-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        background: #222;
+        color: #fff;
+        transition: all 0.3s;
+
+        &:hover {
+          background: #fff;
+          color: #000;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+    }
+  }
+}

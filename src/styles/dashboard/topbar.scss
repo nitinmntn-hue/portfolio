@@ -1,0 +1,10 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.topbar{
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+}

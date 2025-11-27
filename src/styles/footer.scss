@@ -1,0 +1,31 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+
+  .socials {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    a {
+      color: #fff;
+      transition: $transition;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}

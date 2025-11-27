@@ -1,0 +1,25 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+.card {
+  background: #fff;
+  border-radius: $radius;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: $transition;
+
+  h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+
+  p {
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+}
