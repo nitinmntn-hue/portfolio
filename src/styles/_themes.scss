@@ -1,0 +1,30 @@
+@use "sass:map";
+
+// _themes.scss
+$themes: (
+  light: (
+    primary: #3498db,
+  ),
+  dark: (
+    primary: #9b59b6,
+  )
+);
+
+@function theme-color($theme, $key) {
+  @return map.get(map.get($themes, $theme), $key);
+}
+
+
+// _theme-classes.scss
+@each $name, $map in $themes {
+  .theme-#{$name} {
+    background-color: map.get($map, background);
+    color: map.get($map, text);
+
+    a {
+      color: map.get($map, primary);
+    }
+  }
+}
+
+

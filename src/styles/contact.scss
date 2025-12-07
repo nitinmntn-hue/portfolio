@@ -2,13 +2,11 @@
 @use './mixins.scss' as *;
 
 .contact {
-  background: #000;
-  color: #fff;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 
   .section-header {
     text-align: center;
-    font: 300 48px 'Oswald', sans-serif;
+    font: 300 48px 'georgia', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 2rem;
@@ -18,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 90%;
     margin: auto;
 
     @media (max-width: 850px) {
@@ -34,15 +32,14 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
 
     .form-control {
       width: 100%;
       padding: 0.8rem;
       border: 1px solid #444;
       border-radius: 6px;
-      background: #111;
-      color: #fff;
+      color: var(--text);
       font-size: 1rem;
 
       &:focus {
@@ -53,22 +50,6 @@
 
     textarea {
       resize: vertical;
-    }
-
-    .send-button {
-      width: 100%;
-      padding: 0.8rem;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-
-      &:hover {
-        background: #e68900;
-      }
     }
   }
 
@@ -85,7 +66,7 @@
       li {
         margin: 0.8rem 0;
         font-size: 1rem;
-        color: #bbb;
+        color: var(--background);
 
         i {
           margin-right: 10px;
@@ -93,7 +74,7 @@
         }
 
         a {
-          color: #bbb;
+          color: var(--primary);
           text-decoration: none;
 
           &:hover {
@@ -130,7 +111,8 @@
 
     .copyright {
       font-size: 0.9rem;
-      color: #777;
+      color: var(--black);
+      opacity: 0.5;
       text-align: center;
     }
   }

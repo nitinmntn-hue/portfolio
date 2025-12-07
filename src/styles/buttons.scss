@@ -1,18 +1,21 @@
 @use './variables.scss' as *;
 @use './mixins.scss' as *;
+@use './themes' as *;
 
 
 .shine-button {
   position: relative;
   padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
+  background: var(--logo);
+  font-size: 1.2rem;
   border: none;
   border-radius: $radius;
+  width: 100%;
+  font-weight: 800;
   cursor: pointer;
   overflow: hidden;
   transition: $transition;
-  color: #fff;
+  color: var(--white);
 
   &::before {
     content: '';
@@ -21,7 +24,7 @@
     width: 40px;
     top: 0;
     left: -60px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.801), transparent);
     transform: rotate(45deg) translateY(-35%);
     animation: shine 3s ease infinite;
   }
@@ -47,7 +50,7 @@
   box-shadow: 0 10px 30px rgba(102,126,234,0.4);
 }
 
-.button-accent {
+.button-accent{
   background: linear-gradient(135deg, var(--accent), #ffd200);
   box-shadow: 0 10px 30px rgba(247,151,30,0.4);
 }

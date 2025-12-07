@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "themes" as *; // import $themes
+
+@mixin theme($theme-name) {
+  @each $key, $value in map.get($themes, $theme-name) {
+    --#{$key}: #{$value};
+  }
+}

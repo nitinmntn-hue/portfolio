@@ -1,8 +1,10 @@
+import Buttons from "../components/Buttons";
 import "../styles/contact.scss";
 
 function Contact() {
   return (
-      <section id="contact" className="contact">
+      <section>
+        <div id="contact" className="contact">
         <h1 className="section-header">Contact Me</h1>
 
         <div className="contact-wrapper">
@@ -32,9 +34,8 @@ function Contact() {
               required
               className="form-control"
             ></textarea>
-            <button type="submit" className="send-button">
-              <i className="fa fa-paper-plane"></i> Send
-            </button>
+            <Buttons type='submit' text="Send" variant="dark"/>
+
           </form>
 
           {/* Contact Info */}
@@ -55,6 +56,8 @@ function Contact() {
             <p className="copyright">© {new Date().getFullYear()} All Rights Reserved</p>
           </div>
         </div>
+        </div>
+        
       </section>
   );
 }

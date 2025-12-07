@@ -1,10 +1,36 @@
+@use "mixins" as *;
 :root {
-  --primary: #667eea;
-  --secondary: #764ba2;
-  --dark: #1f2937;
-  --light: #f8fafc;
-  --accent: #ff9800;
+  --secondary: #03DAC5;
+  --varient: #018786;
+  --white: #fff;
+  --black: #000;
+  --purple: #3700B3;
 }
+.theme-light {
+  --primary: #6200EE;
+  --background: #FFF;
+  --text: #000000;
+  --accent: #B00020;
+  --logo: #fc8570;
+}
+
+.theme-dark {
+  --primary: #BB86FC;
+  --background: #444242;
+  --text: #fff;
+  --accent: #CF6679;
+  --logo: #695ff1;
+}
+
+.theme-light {
+  @include theme(light);
+}
+
+.theme-dark {
+  @include theme(dark);
+}
+
+
 
 $font-main: 'Inter', sans-serif;
 $radius: 12px;
