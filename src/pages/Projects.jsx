@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "../styles/home.scss";
+import "../styles/about.scss";
 import Buttons from "../components/Buttons.jsx";
 
 function Projects() {
@@ -13,7 +13,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className="projects">
+    <section className="projects">
       <h2>My Projects</h2>
       <ul>
         {projects.map((p, i) => (
@@ -24,8 +24,11 @@ function Projects() {
         ))}
       </ul>
 
-      <Buttons/>
-    </div>
+      <Buttons text="View"/>
+      <Buttons text="Dark Button" variant="dark"/>
+      <Buttons text="Accent Button" variant="accent"/>
+      <Buttons text="Primary Button" variant="primary"/>
+    </section>
   );
 }
 

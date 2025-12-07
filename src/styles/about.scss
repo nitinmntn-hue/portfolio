@@ -2,25 +2,26 @@
 @use './mixins.scss' as *;
 
 .about {
+  margin: 2rem 0.5rem;
+
   .skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0.5rem;
 
-    li {
-      background: var(--dark);
-      color: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: 500;
-      transition: transform 0.3s, background 0.3s;
+    h2 {
+      background: var(--logo);
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      color: var(--white);
+    }
 
-      &:hover {
-        transform: translateY(-5px);
-        background: var(--primary);
-      }
+    .skill {
+      gap: 1rem;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
 
