@@ -5,7 +5,7 @@ function Home() {
   const images = [
     { id: 1, src: "image/js.png", alt: "Javascript", animate: "jump-img " },
     { id: 2, src: "image/html.png", alt: "HTML 5", animate: "jump-img " },
-    { id: 3, src: "/image/css.png", alt: "CSS", animate: "jump-img " },
+    { id: 3, src: "image/css.png", alt: "CSS", animate: "jump-img " },
     { id: 4, src: "image/react.png", alt: "REACT JS", animate: "rotate-img " },
     { id: 5, src: "image/redux.png", alt: "REDUX", animate: "jump-img" },
     { id: 6, src: "image/sass.png", alt: "SASS", animate: "jump-img " },
