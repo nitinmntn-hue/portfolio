@@ -10,4 +10,6 @@ export default defineConfig({
       },
     }),
   ],
+  // 👇 Important for GitHub Pages hosting
+  base: '/portfolio/',
 })
